@@ -20,6 +20,7 @@
         
         /* Шапка */
         .header-content {
+            background-color: #f6d025;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -27,7 +28,6 @@
         }
         
         .logo {
-            background-color: #f6d025;
             font-size: 28px;
             font-weight: 500;
             color: #000000;
@@ -211,3 +211,4 @@
             padding: 30px 0;
             text-align: center;
         }
+
