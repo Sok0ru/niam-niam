@@ -1,0 +1,213 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        
+        }
+        
+        /* Шапка */
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 2%;
+        }
+        
+        .logo {
+            background-color: #f6d025;
+            font-size: 28px;
+            font-weight: 500;
+            color: #000000;
+            padding: 10px;
+            margin: 0;
+        }
+        
+        .slogan {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            background: #f5e8c3;
+            padding: 15px;
+            text-align: center;
+            font-weight: 840;
+            font-size: 20px;
+    
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #d4a017;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #b8860b;
+        }
+        
+        /* Навигация */
+        nav {
+    
+            padding: 0;
+    
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 10px 0;
+            display: block;
+        }
+        
+        /* Секции */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #d4a017;
+            font-size: 28px;
+        }
+        
+        /* Преимущества */
+        .advantages {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .advantage-card {
+            flex: 0 0 30%;
+            background: #f9f9f9;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .advantage-card h3 {
+            color: #d4a017;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        /* Этапы работы */
+        .work-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .step {
+            flex: 0 0 23%;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .step h3 {
+            margin-bottom: 15px;
+            color: #d4a017;
+        }
+        
+        /* Статистика */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .stat-item {
+            flex: 0 0 30%;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: bold;
+            color: #d4a017;
+        }
+        
+        .stat-text {
+            font-size: 18px;
+        }
+        
+        /* Форма */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        /* Подвал */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
