@@ -1,0 +1,305 @@
+/* Обновленный CSS */
+/* ================================
+   Reset and Base Styles
+   ================================ */
+:root {
+    --primary-color: #f6d025;
+    --secondary-color: #222;
+    --text-color: #333;
+    --light-text: #fff;
+    --background-light: #f8f8f8;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ================================
+   Header & Hero
+   ================================ */
+header {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--light-text);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0c021;
+}
+
+/* ================================
+   Services Section
+   ================================ */
+.services-section {
+    background-color: var(--background-light);
+    padding: 60px 0;
+}
+
+.services-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--light-text);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.service-card h3 {
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+/* ================================
+   About Section
+   ================================ */
+.about-section {
+    padding: 60px 0;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.advantage-card {
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.advantage-card h3 {
+    color: var(--secondary-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* ================================
+   Stats Section
+   ================================ */
+.stats-section {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 60px 0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.stat-text {
+    font-size: 18px;
+}
+
+/* ================================
+   Contact Section
+   ================================ */
+.contact-section {
+    background-color: var(--primary-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+/* ================================
+   Footer
+   ================================ */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-info {
+    max-width: 300px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 20px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
