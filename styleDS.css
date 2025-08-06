@@ -31,13 +31,13 @@ body {
 /* ================================
    TEXT
    ================================ */
-   h2{
+h2{
     font-weight: 1000;
-   }
+}
+
    h4{
     font-weight: 800;
-   }
-
+}
 /* ================================
    Header & Hero
    ================================ */
@@ -94,9 +94,16 @@ header {
 }
 
 .hero h1 {
-    text-align: center;
+    text-align: left;
+    font-size: 15px;
+    margin: 0;
+}
+
+.hero h5 {
+    text-align: left;
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .highlight {
@@ -117,18 +124,42 @@ header {
    Buttons
    ================================ */
 .cta-button {
-    font-family: Arial, sans-serif;
     display: inline-block;
     background: #06cddf;
-    color: var(--light-text);
-    padding: 12px 30px;
-    text-decoration: none;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 18px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 20px;
 }
 
 .cta-button:hover {
     background: #007d88;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: none; /* Скрыта по умолчанию */
+  z-index: 99;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #e0c021;
+  transform: translateY(-3px);
 }
 
 /* ================================
@@ -164,6 +195,31 @@ header {
     font-size: 20px;
 }
 
+/* Этапы работы */
+.work-steps {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+        
+.step {
+    flex: 0 0 20%;
+    text-align: center;
+    padding: 20px;
+}
+        
+.step h6 {
+    text-align: left;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+        
+.step h7 {
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #000000;
+}
 /* ================================
    About Section
    ================================ */
@@ -200,8 +256,8 @@ header {
    Stats Section
    ================================ */
 .stats-section {
-    background-color: var(--secondary-color);
-    color: var(--light-text);
+    background-color: #f9f9f9;
+    color: var(--secondary-color);
     padding: 60px 0;
 }
 
@@ -215,7 +271,7 @@ header {
 .stat-number {
     font-size: 48px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #06cddf;
     margin-bottom: 10px;
 }
 
