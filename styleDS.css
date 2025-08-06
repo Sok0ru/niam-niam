@@ -29,8 +29,8 @@ body {
    Header & Hero
    ================================ */
 header {
-    background-color: var(--secondary-color);
-    color: var(--light-text);
+    background-color: #f6d025;
+    color: var(--secondary-color);
     padding: 20px 0;
 }
 
@@ -44,17 +44,24 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.deep-logo {
+    font-size: 24px;
+    font-weight: bold;
     color: var(--light-text);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    font-size: 18px;
     gap: 20px;
 }
 
 .nav-links a {
-    color: var(--light-text);
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -90,18 +97,19 @@ header {
    Buttons
    ================================ */
 .cta-button {
+    font-family: Arial, sans-serif;
     display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background: #06cddf;
+    color: var(--light-text);
     padding: 12px 30px;
-    border-radius: 4px;
+    border-radius: px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #e0c021;
+    background: #007d88;
 }
 
 /* ================================
