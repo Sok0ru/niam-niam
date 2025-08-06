@@ -43,7 +43,7 @@ h2{
    ================================ */
 header {
     background-color: #f6d025;
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 .about-header .text1{
     margin-top: 10px;
@@ -72,6 +72,7 @@ header {
 }
 
 .nav-links {
+    
     display: flex;
     list-style: none;
     font-size: 18px;
@@ -79,13 +80,13 @@ header {
 }
 
 .nav-links a {
-    color: var(--secondary-color);
+    color: #333;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: #000000;
 }
 
 .hero {
@@ -129,7 +130,7 @@ header {
     color: #fff;
     padding: 15px 40px;
     font-size: 18px;
-    font-weight: bold;
+    border-radius: 16px;
     text-decoration: none;
     text-transform: uppercase;
     margin-top: 20px;
@@ -197,22 +198,28 @@ header {
 
 /* Этапы работы */
 .work-steps {
+margin-left: 200px;
+margin-right: 200px;
 display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 }
-        
+   
+
 .step {
+    background-color: #f1f1f1;
+    border-radius: 8px;
     flex: 0 0 20%;
     text-align: center;
     padding: 20px;
 }
         
-.step h4{
+.step h2 {
     text-align: left;
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 30px;
+    margin-left: 210px ;
 }
         
 .step h3 {
