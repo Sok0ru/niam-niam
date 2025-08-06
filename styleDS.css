@@ -22,8 +22,21 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
 }
+.section .about-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* ================================
+   TEXT
+   ================================ */
+   h2{
+    font-weight: 1000;
+   }
+   h4{
+    font-weight: 800;
+   }
 
 /* ================================
    Header & Hero
@@ -31,7 +44,12 @@ body {
 header {
     background-color: #f6d025;
     color: var(--secondary-color);
-    padding: 20px 0;
+}
+.about-header .text1{
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 800;
+    padding-left: 20px;
 }
 
 .header-content {
@@ -71,18 +89,20 @@ header {
 }
 
 .hero {
-    text-align: center;
-    padding: 60px 0;
+    text-align: left;
+    padding: 30px 0;
 }
 
 .hero h1 {
+    text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
 }
 
 .highlight {
+
     font-size: 24px;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin: 20px 0;
     font-weight: bold;
 }
@@ -102,7 +122,6 @@ header {
     background: #06cddf;
     color: var(--light-text);
     padding: 12px 30px;
-    border-radius: px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
