@@ -6,9 +6,15 @@
     --primary-color: #f6d025;
     --secondary-color: #222;
     --text-color: #333;
+    --step-color:#666;
+    --review-date:#888;
     --light-text: #fff;
     --background-light: #f8f8f8;
     --reviews-color: #262629;
+    --insert-color: #06cddf;
+    --reviews-card-color:#333336;
+    
+
 }
 
 body {
@@ -43,7 +49,7 @@ h2{
    Header & Hero
    ================================ */
 header {
-    background-color: #f6d025;
+    background-color: var(--primary-color);
     color: var(--text-color);
 }
 .about-header .text1{
@@ -129,8 +135,8 @@ header {
    ================================ */
 .cta-button {
     display: inline-block;
-    background: #06cddf;
-    color: #fff;
+    background: var(--insert-color);
+    color: var(--light-text);
     padding: 15px 40px;
     font-size: 18px;
     border-radius: 16px;
@@ -203,20 +209,6 @@ header {
    Steps Section
    ================================ */
 .steps-section {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-}
-
-.steps-section h2 {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 32px;
-}
-
-/* ================================
-   Steps Section
-   ================================ */
-.steps-section {
     padding: 80px 0;
     background-color: #f9f9f9;
 }
@@ -242,7 +234,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: white;
+    background: var(--light-text);
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -252,7 +244,7 @@ header {
 .step-number {
     font-size: 44px;
     font-weight: 800;
-    color: #06cddf;
+    color: var(--insert-color);
     margin-right: 0px;
     margin-bottom: 15px;
     line-height: 1;
@@ -268,14 +260,14 @@ header {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--text-color);
 }
 
 .step-description {
     text-align: center;
     font-size: 16px;
     line-height: 1.6;
-    color: #666;
+    color: var(--step-color);
 }
 
 /* ================================
@@ -314,7 +306,7 @@ header {
    Stats Section
    ================================ */
 .stats-section {
-    background-color: #f9f9f9;
+    background-color: var(--background-light);
     color: var(--secondary-color);
     padding: 60px 0;
 }
@@ -329,7 +321,7 @@ header {
 .stat-number {
     font-size: 48px;
     font-weight: bold;
-    color: #06cddf;
+    color: var(--insert-color);
     margin-bottom: 10px;
 }
 
@@ -360,7 +352,7 @@ header {
     max-width: 600px;
     margin: 0 auto;
     padding: 30px;
-    background: #f6d025;
+    background: var(--primary-color);
     border-radius: 8px;
 }
 
@@ -436,32 +428,134 @@ footer {
 /* ================================
    Reviews
    ================================ */
-.pull-reviews{
+.reviews-section {
     background-color: var(--reviews-color);
+    padding: 80px 0;
+    color: var(--light-text);
 }
 
-.pull-reviews h2{
+.section-subtitle {
+    font-size: 18px;
     color: var(--light-text);
-    font-size: 10px;
-    margin-bottom: 0px;
-}
-
-.pull-reviews h3{
-    color: var(--light-text);
-    margin-top: 0;
-    font-size: 48px;
-}
-.pull-reviews h4{
-    color: var(--light-text);
-    margin-top: 0;
-    font-size: 20p;
-}
-
-.reviews{
-    background-color: var(--reviews-color); 
-    padding: 30px;
-    border-radius: 8px;
+    margin-bottom: 5px;
     text-align: center;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.review-card {
+    background: var(--reviews-card-color);
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--insert-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: var(--light-text);
+}
+
+.review-author h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--light-text);
+}
+
+.review-rating {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.review-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.review-date {
+    color:var(--review-date);
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.external-reviews {
+    background: var(--reviews-card-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+}
+
+.external-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.review-platform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.platform-rating {
+    margin-bottom: 15px;
+}
+
+.rating-value {
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--light-text);
+}
+
+.rating-stars {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.rating-count {
+    color: var(--review-date);
+    font-size: 16px;
+}
+
+.review-link {
+    color: var(--insert-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.review-link:hover {
+    color: var(--primary-color);
 }
 
 /* ================================
@@ -502,5 +596,21 @@ footer {
     .step-number {
         font-size: 36px;
         margin-right: 15px;
+    }
+}
+/* ================================
+   Reviews adaptive
+   ================================ */
+   @media (max-width: 768px) {
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-card {
+        padding: 20px;
     }
 }
