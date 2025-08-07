@@ -8,6 +8,7 @@
     --text-color: #333;
     --light-text: #fff;
     --background-light: #f8f8f8;
+    --reviews-color: #262629;
 }
 
 body {
@@ -430,6 +431,37 @@ footer {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid #444;
+}
+
+/* ================================
+   Reviews
+   ================================ */
+.pull-reviews{
+    background-color: var(--reviews-color);
+}
+
+.pull-reviews h2{
+    color: var(--light-text);
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+.pull-reviews h3{
+    color: var(--light-text);
+    margin-top: 0;
+    font-size: 48px;
+}
+.pull-reviews h4{
+    color: var(--light-text);
+    margin-top: 0;
+    font-size: 20p;
+}
+
+.reviews{
+    background-color: var(--reviews-color); 
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 /* ================================
