@@ -210,7 +210,7 @@ header {
    ================================ */
 .steps-section {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background-color:var(--background-light);
 }
 
 .section-title {
@@ -218,7 +218,6 @@ header {
     font-size: 36px;
     font-weight: 800;
     margin-bottom: 60px;
-    color: #333;
 }
 
 .work-steps {
@@ -339,6 +338,7 @@ header {
 }
 
 .contact-section h2 {
+    color: var(--text-color);
     font-size: 32px;
     margin-bottom: 20px;
 }
@@ -446,7 +446,7 @@ footer {
     font-weight: 700;
     margin-bottom: 30px;
     text-align: center;
-    color: white;
+    color: var(--secondary-color);
 }
 
 .reviews-grid {
@@ -486,6 +486,14 @@ footer {
 .review-author h3 {
     font-size: 20px;
     margin-bottom: 5px;
+    color: var(--light-text);
+}
+
+.reviews-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 60px;
     color: var(--light-text);
 }
 
