@@ -7,6 +7,11 @@
     --secondary-color: #222;
     --text-color: #000000;
     --light-text: #fff;
+    --step-color:#666;
+    --review-date:#888;
+    --reviews-color: #262629;
+    --insert-color: #06cddf;
+    --reviews-card-color:#333336;
     --background-light: #f8f8f8;
     --background-background: #e2e2e2;
 }
@@ -20,7 +25,11 @@ body {
 }
 
 .container{
-    background-color: #e2e2e2;
+    background-color: #e2e2e2;}
+
+.container2{
+    background-color: #262629;
+
 }
     .about-header-container {
       background-color: #e2e2e2;
@@ -30,24 +39,82 @@ body {
       gap: 40px;
       padding: 0px 40px  0px 40px;
     }
+    .about-header .text1{
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 800;
+    padding-left: 20px;
+}
 .section .about-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     flex-grow: 0;
-}.section-title{
-     text-align: center;
 
 }
-.work-steps{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content:flex-start;
-    flex-grow: 1;
-    padding: 0px 40px  0px 40px;
+
+/* ================================
+   Steps Section
+   ================================ */
+.steps-section {
+    padding: 80px 0;
+    background-color:var(--background-light);
 }
-.step{
-    font-size: 20px;
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+.work-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--light-text);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.step-number {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--insert-color);
+    margin-right: 0px;
+    margin-bottom: 15px;
+    line-height: 1;
+    min-width: 50px;
+}
+
+.step-content {
+    width: 100%;
+    flex: 1;
+}
+
+.step-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.step-description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--step-color);
 }
 .about-content{
     display: flex;
@@ -236,7 +303,7 @@ header {
    About Section
    ================================ */
 .about-section {
-    padding: 40px 0;
+    padding: 10px 0;
 }
 
 .about-section h2 {
@@ -287,7 +354,7 @@ header {
 .stat-number {
     font-size: 48px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--insert-color);
     margin-bottom: 10px;
 }
 
@@ -345,47 +412,6 @@ input, textarea {
 textarea {
     min-height: 120px;
 }
-
-/* ================================
-   Footer
-   ================================ */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--light-text);
-    padding: 40px 0 20px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.footer-info {
-    max-width: 300px;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-links a {
-    color: var(--light-text);
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #444;
-}
-
 /* ================================
    Reviews
    ================================ */
@@ -528,6 +554,46 @@ footer {
 }
 
 /* ================================
+   Footer
+   ================================ */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-info {
+    max-width: 300px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* ================================
    Responsive
    ================================ */
 @media (max-width: 768px) {
@@ -581,7 +647,6 @@ footer {
   background-color: #e0c021;
   transform: translateY(-3px);
 }
-
 /* ================================
    Steps adaptive
    ================================ */
@@ -600,20 +665,3 @@ footer {
         margin-right: 15px;
     }
 }
-/* ================================
-   Reviews adaptive
-   ================================ */
-   @media (max-width: 768px) {
-    .section-title {
-        font-size: 36px;
-    }
-    
-    .reviews-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .review-card {
-        padding: 20px;
-    }
-}
-
