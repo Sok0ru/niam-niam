@@ -191,6 +191,11 @@ section {
     padding: 20px 0;
 }
 
+.header h2{
+    font-size: 30px;
+    font-weight: 1000;
+   }
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -409,6 +414,8 @@ textarea {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
+    text-align: center;
+    margin-left: 15px;
 }
 
 .cta-button:hover {
