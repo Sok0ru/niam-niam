@@ -8,28 +8,30 @@
 </head>
 <body>
     <!-- Шапка -->
-    <header>
-       <div class="container-yellow">
+    <header class="header-section bg-yellow">
+      <div class="container">
         <div class="header-content">
-            <div class="logo">СТРОИТЕЛЬНАЯ КОМПАНИЯ</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#about">О компании</a></li>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#steps">Этапы работы</a></li>
-                    <li><a href="#reviews">Отзывы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
+          <div class="logo"> 
+            <img src="Logo.png" alt="Логотип компании" width="80px"> 
+            СТРОИТЕЛЬНАЯ КОМПАНИЯ
+          </div>
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#work-steps">Этапы работы</a></li>
+              <li><a href="#reviews">Отзывы</a></li>
+              <li><a href="#contact">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
-    </div>
+      </div>
     </header>
-
+    
     <!-- Секция отзывов -->
-    <section id="reviews" class="reviews-section">
-        <div class="container-reviews">
+    <section id="reviews" class="reviews-section bg-dark">
+        <div class="container">
             <h2 class="section-subtitle">Рецензии</h2>
-            <h1 class="reviews-title">Оценки клиентов о нашей работе</h1>
+            <h1 class="section-title-reviews">Оценки клиентов о нашей работе</h1>
             
             <div class="reviews-grid">
                 <!-- Отзыв 1 -->
@@ -94,12 +96,12 @@
     </section>
 
     <!-- Подвал -->
-    <footer>
+    <footer class="bg-dark">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
                     <div class="deep-logo">СТРОИТЕЛЬНАЯ КОМПАНИЯ</div>
-                    <p>Телефон: +7 967 484-66-22</p>
+                    <p class="deep-phone">Телефон: +7 967 484-66-22</p>
                 </div>
                 <div class="footer-links">
                     <a href="#about">О компании</a>
@@ -111,5 +113,26 @@
             <p class="copyright">Строительная компания &copy; 2025</p>
         </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Наверх">↑</button>
+    <script>
+        // Кнопка "Наверх"
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
