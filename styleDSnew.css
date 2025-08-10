@@ -13,7 +13,6 @@ Styles
     --review-date: #999;
 }
 
-
 /* ================================
    Background Classes
    ================================ */
@@ -479,12 +478,6 @@ textarea {
     color: var(--light-text);
 }
 
-.review-author h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: var(--light-text);
-}
-
 .review-rating {
     color: var(--primary-color);
     font-size: 18px;
@@ -557,6 +550,54 @@ textarea {
     display: inline-block;
     margin-top: 10px;
 }
+
+/* ================================
+   Reviews Section main page
+   ================================ */
+.reviews-section-main {
+    color: var(--secondary-color);
+}
+
+.section-title-reviews-main {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: left;
+    color: var(--reviews-card-color);
+}
+
+.reviews-grid-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.review-card-main {
+    background: var(--light-gray);
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.review-author-dark h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.review-content-main p{
+    color: var(--secondary-color);
+
+}
+
+.review-card-main {
+    background: var(--light-gray);
+    border-radius: 12px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
 
 
 /* ================================
