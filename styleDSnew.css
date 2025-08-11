@@ -13,6 +13,7 @@ Styles
     --review-date: #999;
 }
 
+
 /* ================================
    Background Classes
    ================================ */
@@ -20,6 +21,7 @@ Styles
 .bg-gray { background-color: var(--light-gray); }
 .bg-white { background-color: var(--light-text); }
 .bg-dark { background-color: var(--secondary-color); }
+
 
 /* ================================
    Container Section
@@ -419,6 +421,94 @@ textarea {
 
 .cta-button:hover {
     background: #007d88;
+}
+
+/* ================================
+   Pricing Section
+   ================================ */
+.pricing-section {
+  padding: 80px 0;
+}
+
+.pricing-column {
+  max-width: 1200px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pricing-card {
+  background: var(--light-gray);
+  height: 250px;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.price-header {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  min-width: 180px;
+}
+
+.price-from {
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+.price-amount {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.price-currency {
+  font-size: 18px;
+  color: var(--secondary-color);
+}
+
+.service-info {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.service-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.service-price {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+.cta-button-price {
+  padding: 20px 40px;
+  color: white;
+  background: var(--accent-color);
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.cta-button-price:hover {
+  background: #007d88;
 }
 
 /* ================================
