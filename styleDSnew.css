@@ -13,7 +13,6 @@ Styles
     --review-date: #999;
 }
 
-
 /* ================================
    Background Classes
    ================================ */
@@ -22,8 +21,6 @@ Styles
 .bg-white { background-color: var(--light-text); }
 .bg-dark { background-color: var(--secondary-color); }
 .bg-black {background-color: var(--text-color);}
-
-
 
 /* ================================
    Container Section
@@ -55,12 +52,14 @@ section {
     gap: 40px;
     padding: 0px 40px  0px 40px;
 }
-    .about-header .text1{
+
+.about-header .text1{
     margin-top: 10px;
     font-size: 2rem;
     font-weight: 800;
     padding-left: 20px;
 }
+
 .section .about-section{
     display: flex;
     flex-wrap: wrap;
@@ -68,41 +67,54 @@ section {
     flex-grow: 0;
 
 }
+/* ================================
+   Components
+   ================================ */
+.advantages-grid, .work-steps, .stats-grid, .reviews-grid, .reviews-grid-main, .pricing-column {
+  display: grid; gap: 30px; margin: 0 auto;
+}
+.advantages-grid { grid-template-columns: repeat(3, 1fr); }
+.work-steps { grid-template-columns: repeat(4, 1fr); }
+.stats-grid { grid-template-columns: repeat(3, 1fr); 
+    text-align: center; }
+.reviews-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 60px; }
+.reviews-grid-main { grid-template-columns: 1fr; 
+    gap: 15px; }
+.pricing-column { grid-template-columns: 1fr; 
+    max-width: 1200px;  }
+
+/* ================================
+   Cards
+   ================================ */
+.advantage-card, .step, .review-card, .review-card-main, .pricing-card, .stat-item {
+    background: var(--light-text); 
+    border-radius: 12px; 
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease;
+}
+.advantage-card:hover, .step:hover, .review-card:hover, .pricing-card:hover { transform: translateY(-5px); }
+.review-card, .external-reviews { background: var(--reviews-card-color);
+    color: var(--light-text); }
+.review-card-main { background: var(--light-gray); }
+.pricing-card { background: var(--secondary-color);
+    height: 250px; 
+    align-items: center; 
+    justify-content: space-between;
+    display: flex; }
+.stat-item { padding: 30px; 
+    text-align: center; }
 
 /* ================================
    Steps Section
    ================================ */
-.steps-section {
-    padding: 80px 0;
-    background-color:var(--background-light);
-}
-
 .section-title {
     text-align: center;
     font-size: 36px;
     font-weight: 800;
     margin-bottom: 60px;
     color: var(--secondary-color);
-}
-
-.work-steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: var(--light-text);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
 }
 
 .step p{
@@ -291,22 +303,6 @@ section {
 /* ================================
    About Section
    ================================ */
-.about-section .section-title {
-    margin-bottom: 60px;
-}
-
-.advantages-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.advantage-card {
-    background: var(--light-text);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
 
 .advantage-card h3 {
     font-size: 22px;
@@ -317,9 +313,6 @@ section {
 /* ================================
    Steps Section
    ================================ */
-.steps-section .section-title {
-    margin-bottom: 60px;
-}
 
 .work-steps {
     display: grid;
@@ -350,13 +343,6 @@ section {
 /* ================================
    Stats Section
    ================================ */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    text-align: center;
-}
-
 .stat-number {
     font-size: 48px;
     font-weight: 800;
@@ -399,13 +385,25 @@ section {
     text-transform: uppercase;
 }
 
-.form-group input,
+.form-group input{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 .form-group textarea {
     width: 100%;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+}
+
+.contact p{
+    color: var(--secondary-color);
+    font-size: 12px;
 }
 
 textarea {
@@ -439,26 +437,6 @@ textarea {
    ================================ */
 .pricing-section {
   padding: 80px 0;
-}
-
-.pricing-column {
-  max-width: 1200px;
-  margin: 30px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.pricing-card {
-  background: var(--secondary-color);
-  height: 250px;
-  border-radius: 12px;
-  padding: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: transform 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .pricing-card:hover {
@@ -540,7 +518,7 @@ textarea {
 .section-subtitle {
     font-size: 18px;
     color: var(--primary-color);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -551,20 +529,6 @@ textarea {
     margin-bottom: 50px;
     text-align: center;
     color: var(--light-gray);
-}
-
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.review-card {
-    background: var(--reviews-card-color);
-    border-radius: 12px;
-    padding: 30px;
-    transition: transform 0.3s ease;
 }
 
 .review-header {
@@ -607,6 +571,7 @@ textarea {
 .external-reviews {
     background: var(--reviews-card-color);
     border-radius: 12px;
+    
     padding: 30px;
     text-align: center;
     max-width: 600px;
@@ -675,20 +640,6 @@ textarea {
     color: var(--reviews-card-color);
 }
 
-.reviews-grid-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    gap: 15px;
-    margin-bottom: 60px;
-}
-
-.review-card-main {
-    background: var(--light-gray);
-    border-radius: 12px;
-    padding: 30px;
-    transition: transform 0.3s ease;
-}
-
 .review-author-dark h3 {
     font-size: 20px;
     margin-bottom: 5px;
@@ -706,8 +657,6 @@ textarea {
     padding: 30px;
     transition: transform 0.3s ease;
 }
-
-
 
 /* ================================
    Footer
@@ -790,36 +739,19 @@ textarea {
    Responsive
    ================================ */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .advantages-grid,
-    .work-steps,
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .form-row {
-        flex-direction: column;
-    }
-}
-/* ================================
-   Steps adaptive
-   ================================ */
-
-@media (max-width: 768px) {
-    .work-steps {
-        grid-template-columns: 1fr;
-    }
-    
-    .step {
-        padding: 20px;
-    }
-    
-    .step-number {
-        font-size: 36px;
-        margin-right: 15px;
-    }
+  .header-content { flex-direction: column; gap: 20px; }
+  .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+  
+  .advantages-grid, .work-steps, .stats-grid { grid-template-columns: 1fr; }
+  
+  .form-row { flex-direction: column; }
+  .pricing-card { height: auto; flex-direction: column; gap: 15px; padding: 25px 20px; }
+  .price-header { justify-content: center; width: 100%; }
+  .price-amount { font-size: 28px; }
+  
+  .about-header-container, .about-content { flex-direction: column; }
+  .about-contacts { padding-right: 0; }
+  
+  .step { padding: 20px; }
+  .step-number { font-size: 36px; margin-right: 15px; }
 }
