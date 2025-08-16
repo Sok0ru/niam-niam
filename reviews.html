@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Отзывы | Строительная компания</title>
-    <link rel="stylesheet" href="styleDSnew.css">
+    <title>Отзывы | ТольяттиРемонт</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Шапка -->
     <header class="header-section bg-yellow">
-      <div class="container">
-        <div class="header-content">
-          <div class="logo"> 
-            <img src="Logo.png" alt="Логотип компании" width="80px"> 
-            СТРОИТЕЛЬНАЯ КОМПАНИЯ
-          </div>
-          <nav>
-            <ul class="nav-links">
-              <li><a href="#services">Услуги</a></li>
-              <li><a href="#work-steps">Этапы работы</a></li>
-              <li><a href="#reviews">Отзывы</a></li>
-              <li><a href="#contact">Контакты</a></li>
-            </ul>
-          </nav>
+        <div class="container-head">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="Logo.png" alt="Логотип" width="80">
+                    <a href="index.html">ТольяттиРемонт</a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="about.html #work-steps">Этапы работы</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="about.html #about-contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </div>
     </header>
     
     <!-- Секция отзывов -->
@@ -39,7 +40,9 @@
                     <div class="review-header">
                         <div class="review-avatar">А</div>
                         <div class="review-author">
+                            <div class="dark">
                             <h3>Ангелина</h3>
+                          </div>
                             <div class="review-rating">★★★★★</div>
                         </div>
                     </div>
@@ -54,7 +57,10 @@
                     <div class="review-header">
                         <div class="review-avatar">И</div>
                         <div class="review-author">
+                          <div class="dark">
                             <h3>Иван</h3>
+                          </div>
+                            
                             <div class="review-rating">★★★★☆</div>
                         </div>
                     </div>
@@ -69,7 +75,9 @@
                     <div class="review-header">
                         <div class="review-avatar">П</div>
                         <div class="review-author">
+                            <div class="dark">
                             <h3>Петр</h3>
+                          </div>
                             <div class="review-rating">★★★★★</div>
                         </div>
                     </div>
@@ -115,24 +123,6 @@
     </footer>
 
     <button class="back-to-top" aria-label="Наверх">↑</button>
-  <script>
-    // Кнопка "Наверх"
-    const backToTopButton = document.querySelector('.back-to-top');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTopButton.style.display = 'flex';
-      } else {
-        backToTopButton.style.display = 'none';
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
+    <script src="js/common.js"></script>
 </body>
 </html>
