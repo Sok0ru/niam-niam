@@ -148,6 +148,10 @@ section {
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
     transition: transform 0.3s ease;
+}.review-card{
+
+margin: 20px 20px 0 0;
+
 }
 .advantage-card:hover, .step:hover, .review-card:hover, .pricing-card:hover { transform: translateY(-5px); }
 .review-card, .external-reviews { background: var(--reviews-card-color);
@@ -164,9 +168,7 @@ section {
 /* ================================
    Сrutch section
    ================================ */
-.services-page-section, .contact-section{
-    padding: 60px;
-}
+
 
 /* ================================
    Scripts Style 
@@ -535,6 +537,7 @@ body.transitioning .transition-overlay {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 
 .form-row {
@@ -634,7 +637,6 @@ textarea {
 .price-value {
     font-size: 28px;
     font-weight: 800;
-    color: var(--accent-color);
     margin: 20px 0;
     text-align: center;
 }
@@ -648,8 +650,9 @@ textarea {
 
 .pricing-button {
     display: inline-block;
+    width: 100%;
     padding: 12px 25px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: var(--secondary-color);
     text-decoration: none;
     border-radius: 5px;
@@ -663,10 +666,7 @@ textarea {
 }
 
 .promo-section {
-    padding: 30px;
     border-radius: 12px;
-    margin: 40px auto;
-    max-width: 1200px;
     text-align: center;
 }
 
