@@ -396,6 +396,7 @@ body.transitioning .transition-overlay {
     padding: 20px 0;
 }
 .header-text{
+   padding-bottom: 20px;
     padding-left: 40px;
 }
 .header h2{
