@@ -1,4 +1,4 @@
-function initSlider() {
+document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.slider');
     if (!slider) return;
 
@@ -9,38 +9,23 @@ function initSlider() {
     
     let currentIndex = 0;
     const slideCount = slideItems.length;
-    let slideInterval;
 
     function updateSlider() {
         slides.style.transform = `translateX(${-currentIndex * 100}%)`;
     }
 
-    function goToSlide(index) {
-        currentIndex = (index + slideCount) % slideCount;
-        updateSlider();
-    }
-
-    function startAutoSlide() {
-        slideInterval = setInterval(() => {
-            goToSlide(currentIndex + 1);
-        }, 5000);
-    }
-
     prevBtn.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        goToSlide(currentIndex - 1);
-        startAutoSlide();
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateSlider();
     });
 
     nextBtn.addEventListener('click', () => {
-        clearInterval(slideInterval);
-        goToSlide(currentIndex + 1);
-        startAutoSlide();
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateSlider();
     });
 
-    slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
-    slider.addEventListener('mouseleave', startAutoSlide);
-
+    // Инициализация
     updateSlider();
-    startAutoSlide();
-}
+    
+    console.log('Слайдер инициализирован, найдено слайдов:', slideCount);
+});
